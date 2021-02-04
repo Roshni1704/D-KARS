@@ -21,5 +21,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-//export const routingComponents = [RegisterComponent,LoginComponent,WalletComponent,CardDetailsComponent,DashboardComponent];
