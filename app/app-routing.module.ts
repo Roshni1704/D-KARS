@@ -6,18 +6,26 @@ import { RegisterComponent } from './register/register.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookingComponent } from './booking/booking.component';
+import { HomeComponent } from './home/home.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { DisplayParkingLotsComponent } from './display-parking-lots/display-parking-lots.component';
+import { ParkingComponent } from './parking/parking.component';
 import { CheckinComponent } from './checkin/checkin.component';
-import { CheckoutComponent } from "./checkout/checkout.component";
+
 
 const routes: Routes = [
-  {path:'customer/register',component:RegisterComponent},
+  {path:'customer/add',component:RegisterComponent},
+  {path:'customer/home',component:HomeComponent},
   {path:'customer/login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent},
+  {path:'customer/dashboard',component:DashboardComponent},
   {path:'customer/wallet/:id',component:WalletComponent},
   {path:'customer/card/:id',component:CardDetailsComponent},
-  {path:'parking/booking/:id',component:BookingComponent},
-  {path:'customer/checkin/:id', component:CheckinComponent},
-  {path:'customer/checkout/:id', component:CheckoutComponent}
+  {path:'booking/:id',component:BookingComponent},
+  {path:'parking',component:ParkingComponent},
+  {path:'parking/details/:location',component:DisplayParkingLotsComponent},
+  {path:'checkout/:id',component:CheckoutComponent},
+  {path:'checkin/:id',component:CheckinComponent},
+  {path:'home',component:HomeComponent}
 ];
 
 @NgModule({
@@ -25,5 +33,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-//export const routingComponents = [RegisterComponent,LoginComponent,WalletComponent,CardDetailsComponent,DashboardComponent];
