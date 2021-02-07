@@ -12,7 +12,7 @@ import { DisplayParkingLotsComponent } from './display-parking-lots/display-park
 import { ParkingComponent } from './parking/parking.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-
+import { ReceiptComponent } from './receipt/receipt.component';
 
 const routes: Routes = [
   // {path:'',redirectTo:'HomeComponent',pathMatch:'full'},
@@ -28,7 +28,8 @@ const routes: Routes = [
   {path:'checkout/:id',component:CheckoutComponent},
   {path:'checkin/:id',component:CheckinComponent},
   {path:'home',component:HomeComponent},
-  {path:'navigation',component:NavigationBarComponent}
+  {path:'navigation',component:NavigationBarComponent},
+  {path:'receipt', component:ReceiptComponent}
 ];
 
 @NgModule({
