@@ -11,11 +11,14 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { DisplayParkingLotsComponent } from './display-parking-lots/display-parking-lots.component';
 import { ParkingComponent } from './parking/parking.component';
 import { CheckinComponent } from './checkin/checkin.component';
-
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { ReceiptComponent } from './receipt/receipt.component';
+import { CardSavedComponent } from './card-saved/card-saved.component';
 
 const routes: Routes = [
+  // {path:'',redirectTo:'HomeComponent',pathMatch:'full'},
+  {path: '', component:HomeComponent},
   {path:'customer/add',component:RegisterComponent},
-  {path:'customer/home',component:HomeComponent},
   {path:'customer/login',component:LoginComponent},
   {path:'customer/dashboard',component:DashboardComponent},
   {path:'customer/wallet/:id',component:WalletComponent},
@@ -25,7 +28,10 @@ const routes: Routes = [
   {path:'parking/details/:location',component:DisplayParkingLotsComponent},
   {path:'checkout/:id',component:CheckoutComponent},
   {path:'checkin/:id',component:CheckinComponent},
-  {path:'home',component:HomeComponent}
+  {path:'home',component:HomeComponent},
+  {path:'navigation',component:NavigationBarComponent},
+  {path:'receipt', component:ReceiptComponent},
+  {path:'customer/savedcard/:id', component:CardSavedComponent}
 ];
 
 @NgModule({
